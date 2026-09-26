@@ -1,13 +1,13 @@
 const express = require("express");
 const path = require("path");
+const { getItems, createItem } = require("../controllers/items");
+
 const router = express.Router();
 
 // =========={ GET }==========
 
 // api/items
-router.get("/", (req, res) => {
-  res.send("get all items");
-});
+router.get("/", getItems);
 
 // api/items/:id
 router.get("/:id", (req, res) => {
@@ -16,8 +16,6 @@ router.get("/:id", (req, res) => {
 
 // =========={ POST }==========
 // api/items
-router.post("/", (req, res) => {
-  res.send("new item created");
-});
+router.post("/", createItem);
 
 module.exports = router;
