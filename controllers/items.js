@@ -1,6 +1,7 @@
 const Item = require("../models/item");
 
 // функции контроллеры
+// get all
 const getItems = async (req, res) => {
   try {
     const allItems = await Item.find();
@@ -14,15 +15,16 @@ const getItems = async (req, res) => {
   }
 };
 
+// post new
 const createItem = async (req, res) => {
   try {
-    const { title, description, price, image } = req.body;
+    const { title, description, price } = req.body;
 
     const properties = {
       title,
       description,
       price,
-      image,
+      itemImage: `http://localhost:${process.env.PORT}/static/${req.file.filename}`,
     };
 
     const newItem = await Item.create(properties);
