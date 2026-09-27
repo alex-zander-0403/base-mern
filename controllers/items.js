@@ -1,20 +1,37 @@
 const Item = require("../models/item");
 
-// get all
+// =========={ GET }==========
 const getItems = async (req, res) => {
   try {
     const allItems = await Item.find();
 
     res.status(200).json(allItems);
   } catch (error) {
-    // console.log("❌ Ошибка getPlanes!");
+    // console.log("❌ Ошибка getItems!");
     // console.log(error.message);
 
     res.status(500).json({ message: "❌ Ошибка контроллера: getItems!" });
   }
 };
 
-// post new
+// =========={ GET :id }==========
+const getItem = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    // const item = await Item.find({ _id: id });
+    const item = await Item.findById(id);
+
+    res.status(200).json(item);
+  } catch (error) {
+    // console.log("❌ Ошибка getItem!");
+    // console.log(error.message);
+
+    res.status(400).json({ message: "❌ Ошибка контроллера: getItem!" });
+  }
+};
+
+// =========={ POST }==========
 const createItem = async (req, res) => {
   const errors = {};
 
@@ -22,16 +39,16 @@ const createItem = async (req, res) => {
     errors.title = { message: "⚡ нет названия" };
   }
   if (!req.body.description) {
-    errors.title = { message: "⚡ нет описания" };
+    errors.description = { message: "⚡ нет описания" };
   }
   if (req.body.description && req.body.description.length > 500) {
-    errors.title = { message: "⚡ слишком длинное описание (>500)" };
+    errors.description = { message: "⚡ слишком длинное описание (>500)" };
   }
   if (!req.body.price) {
-    errors.title = { message: "⚡ нет цены" };
+    errors.price = { message: "⚡ нет цены" };
   }
   if (!req.file) {
-    errors.title = { message: "⚡ нет изображения" };
+    errors.file = { message: "⚡ нет изображения" };
   }
 
   if (Object.keys(errors).length > 0) {
@@ -59,4 +76,4 @@ const createItem = async (req, res) => {
   }
 };
 
-module.exports = { getItems, createItem };
+module.exports = { getItems, getItem, createItem };

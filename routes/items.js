@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const multer = require("multer");
-const { getItems, createItem } = require("../controllers/items");
+const { getItems, getItem, createItem } = require("../controllers/items");
 const router = express.Router();
 
 // инструкции куда/как сохранять img
@@ -23,10 +23,10 @@ const upload = multer({ storage });
 // api/items
 router.get("/", getItems);
 
+// =========={ GET :id }==========
+
 // api/items/:id
-router.get("/:id", (req, res) => {
-  res.send("get one item with id");
-});
+router.get("/:id", getItem);
 
 // =========={ POST }==========
 // api/items
