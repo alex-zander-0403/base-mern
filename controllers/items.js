@@ -1,6 +1,5 @@
 const Item = require("../models/item");
 
-// функции контроллеры
 // get all
 const getItems = async (req, res) => {
   try {
@@ -17,6 +16,28 @@ const getItems = async (req, res) => {
 
 // post new
 const createItem = async (req, res) => {
+  const errors = {};
+
+  if (!req.body.title) {
+    errors.title = { message: "⚡ нет названия" };
+  }
+  if (!req.body.description) {
+    errors.title = { message: "⚡ нет описания" };
+  }
+  if (req.body.description && req.body.description.length > 500) {
+    errors.title = { message: "⚡ слишком длинное описание (>500)" };
+  }
+  if (!req.body.price) {
+    errors.title = { message: "⚡ нет цены" };
+  }
+  if (!req.file) {
+    errors.title = { message: "⚡ нет изображения" };
+  }
+
+  if (Object.keys(errors).length > 0) {
+    return res.status(400).json(errors);
+  }
+
   try {
     const { title, description, price } = req.body;
 
