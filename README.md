@@ -1,5 +1,10 @@
 base mern stack training project
 
+## stack:
+
+    react, redux
+    node, express, mongoDB
+
 ### scripts
 
 запуск:
