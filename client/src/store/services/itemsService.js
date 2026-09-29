@@ -1,8 +1,6 @@
-//
-
-// services - это вынесенная логика для действий
+// services - утилита для получения данных
 const getItems = async () => {
-  const data = await fetch.get("/api/items"); // GET http://localhost:8000/api/items
+  const data = await fetch("/api/items"); // GET http://localhost:8000/api/items
   const items = await data.json();
 
   return items;

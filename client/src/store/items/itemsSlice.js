@@ -13,6 +13,7 @@ export const getItems = createAsyncThunk(
   },
 );
 
+//
 const itemsSlice = createSlice({
   name: "items",
   initialState: {
@@ -22,6 +23,7 @@ const itemsSlice = createSlice({
     message: "",
   },
 
+  //
   extraReducers: (builder) => {
     builder.addCase(getItems.pending, (state) => {
       state.isLoading = true;
