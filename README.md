@@ -1,18 +1,25 @@
-base mern stack training project
+# 🧪 base-mern
 
-## stack:
+Учебный проект на базовом MERN стеке.
 
-    react, redux
-    node, express, mongoDB
+<div align="center">
 
-### scripts
+!JS Quiz Test Interface
+_Интерфейс_
 
-запуск:
+</div>
 
-"npm run dev" для "concurrently \"npm run server\" \"npm run client\" "
+## 🛠 Технологии
 
-"npm start" для запуска отдельно клиента (from client/)
+- **react, redux**
+- **node, express, mongoDB**
 
-Скрипты для сервера:
-"dev": "nodemon server.js"
-"server": "server.js"
+## 🚀 Запуск
+
+```
+"npm run dev" // для "concurrently \"npm run server\" \"npm run client\" "
+
+"npm start" // для запуска отдельно клиента (from client/)
+
+"server": "nodemon server.js" // сервер c nodemon
+```
