@@ -39,14 +39,14 @@ code {
   --surface: #15181e;
   --surface-alt: #1c2028;
 
+  /* Границы */
+  --border: #252a33;
+  --border-strong: #353b47;
+
   /* Текст */
   --text: #e6e8ec;
   --text-muted: #9aa1ae;
   --text-subtle: #6b7280;
-
-  /* Границы */
-  --border: #252a33;
-  --border-strong: #353b47;
 
   /* Акценты */
   --accent: #442d85;

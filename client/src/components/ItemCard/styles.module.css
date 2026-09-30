@@ -1,26 +1,33 @@
 .itemCard {
   position: relative;
-
-  padding: 15px;
+  padding: 5px;
   row-gap: 10px;
 
-  border: 1px solid var(--border);
+  /* border: 1px solid var(--bg-alt); */
   border-radius: 8px;
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 
-  background: linear-gradient(45deg, var(--bg) 0%, var(--bg-alt) 100%);
+  background: linear-gradient(
+    1deg,
+    var(--border) 25%,
+    var(--border-strong) 90%
+  );
 }
 
 .itemInfo {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 
-  padding: 5px 10px;
-
-  background-color: var(--bg-alt);
   border-radius: 5px;
+
+  background: linear-gradient(
+    180deg,
+    var(--border) 25%,
+    var(--border-strong) 90%
+  );
 }
 
 .itemInfo_left {
@@ -42,7 +49,7 @@
 .price {
   font-size: 24px;
   font-weight: bold;
-  color: var(--accent-text);
+  color: var(--color-info);
 }
 
 .img {
