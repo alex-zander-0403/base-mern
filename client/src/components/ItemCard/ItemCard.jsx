@@ -22,7 +22,7 @@ export function ItemCard({
             <span className={styles.price}>{price}$</span>
           </div>
 
-          <button>123</button>
+          {/* <button>123</button> */}
         </div>
       </div>
     </Link>
