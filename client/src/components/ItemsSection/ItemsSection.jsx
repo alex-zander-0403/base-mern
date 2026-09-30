@@ -1,12 +1,12 @@
-// import { Wrapper } from "../Wrapper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getItems } from "../../store/items/itemsSlice";
 import { Wrapper } from "../Wrapper";
-// import styles from "./styles.module.css";
+import { ItemCard } from "../ItemCard";
+import styles from "./styles.module.css";
 
 //
-export function Items() {
+export function ItemsSection() {
   const { items, isLoading } = useSelector((state) => state.items);
   const dispatch = useDispatch();
 
@@ -20,14 +20,14 @@ export function Items() {
 
   return (
     <div>
-      <Wrapper>
+      <Wrapper >
         {items &&
           items.map((el) => {
-            return <p>{el.title}</p>;
+            return <ItemCard key={el._id} {...el} />;
           })}
       </Wrapper>
     </div>
   );
 }
 
-// export default Items;
+// export default ItemsSection;

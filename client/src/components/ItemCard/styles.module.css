@@ -1,0 +1,42 @@
+.itemCard {
+  padding: 15px;
+
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.itemInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.itemInfo_left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.desc {
+  font-size: 10px;
+
+  color: var(--text-muted);
+}
+
+.price {
+  font-size: 20px;
+}
+
+.img {
+  width: 300px;
+  aspect-ratio: 1;
+
+  border-radius: 5px;
+}
