@@ -1,17 +1,26 @@
 .itemCard {
-  padding: 15px;
+  position: relative;
 
-  background-color: var(--bg-alt);
+  padding: 15px;
+  row-gap: 10px;
+
   border: 1px solid var(--border);
   border-radius: 8px;
-
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+  background: linear-gradient(45deg, var(--bg) 0%, var(--bg-alt) 100%);
 }
 
 .itemInfo {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  padding: 5px 10px;
+
+  background-color: var(--bg-alt);
+  border-radius: 5px;
 }
 
 .itemInfo_left {
@@ -21,22 +30,25 @@
 }
 
 .title {
-  font-size: 30px;
+  color: var(--text);
+  font-size: 24px;
 }
 
 .desc {
   font-size: 10px;
-
-  color: var(--text-muted);
+  color: var(--text-subtle);
 }
 
 .price {
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--accent-text);
 }
 
 .img {
-  width: 300px;
+  width: 275px;
   aspect-ratio: 1;
 
   border-radius: 5px;
+  object-fit: cover; /* картинка заполняет блок целиком, обрезая лишнее(как в Instagram). */
 }

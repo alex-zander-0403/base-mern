@@ -20,7 +20,7 @@ export function ItemsSection() {
 
   return (
     <div>
-      <Wrapper >
+      <Wrapper className={styles.itemsGrid}>
         {items &&
           items.map((el) => {
             return <ItemCard key={el._id} {...el} />;

@@ -1,0 +1,8 @@
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+
+  /* background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%); */
+}
