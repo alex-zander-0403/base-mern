@@ -5,10 +5,12 @@
   max-width: 1234px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
+  /* padding: 0 30px; */
 
   z-index: 2;
 
-  /*  */
-  /* border: 1px solid red; */
+  /* ------------------------------------------- */
+  border-left: 2px solid yellow;
+  border-right: 2px solid yellow;
+  /* ------------------------------------------- */
 }
