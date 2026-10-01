@@ -1,12 +1,12 @@
 .header {
   display: flex;
   position: relative;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 
   height: 30vh;
   align-items: center;
 
-  border-bottom: 1px solid var(--border);
+  /* border-bottom: 1px solid var(--border); */
   /* background-color: var(--bg); */
   background: linear-gradient(45deg, #191a43 0%, #442d85 100%);
   overflow: hidden;
