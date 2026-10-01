@@ -1,15 +1,13 @@
 import { Header } from "../../components/Header";
-import { Items } from "../../components/Items";
+import { ItemsSection } from "../../components/ItemsSection";
 
 //
 export function MainPage() {
   return (
     <>
       <Header />
-      <Items />
+      <ItemsSection />
       {/* <Footer /> */}
     </>
   );
 }
-
-// export default MainPage;

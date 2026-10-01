@@ -1,0 +1,64 @@
+.itemCard {
+  /* position: relative; */
+  /* display: flex;
+  justify-content: center; */
+  padding: 5px;
+  /* row-gap: 10px; */
+
+  border-radius: 8px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+
+  background: linear-gradient(
+    1deg,
+    var(--border) 25%,
+    var(--border-strong) 90%
+  );
+}
+
+.itemInfo {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 10px 15px;
+
+  border-radius: 5px;
+
+  background: linear-gradient(
+    180deg,
+    var(--border) 25%,
+    var(--border-strong) 90%
+  );
+}
+
+.itemInfo_left {
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+}
+
+.title {
+  color: var(--text);
+  font-size: 24px;
+}
+
+.desc {
+  margin-bottom: 20px;
+
+  font-size: 15px;
+  color: var(--text-subtle);
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-info);
+}
+
+.img {
+  /* width: 275px; */
+  aspect-ratio: 1;
+
+  border-radius: 5px;
+  object-fit: cover; /* картинка заполняет блок целиком, обрезая лишнее(как в Instagram). */
+}

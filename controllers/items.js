@@ -38,11 +38,11 @@ const createItem = async (req, res) => {
   if (!req.body.title) {
     errors.title = { message: "⚡ нет названия" };
   }
-  if (!req.body.description) {
-    errors.description = { message: "⚡ нет описания" };
+  if (!req.body.desc) {
+    errors.desc = { message: "⚡ нет описания" };
   }
-  if (req.body.description && req.body.description.length > 500) {
-    errors.description = { message: "⚡ слишком длинное описание (>500)" };
+  if (req.body.desc && req.body.desc.length > 500) {
+    errors.desc = { message: "⚡ слишком длинное описание (>500)" };
   }
   if (!req.body.price) {
     errors.price = { message: "⚡ нет цены" };
@@ -56,11 +56,11 @@ const createItem = async (req, res) => {
   }
 
   try {
-    const { title, description, price } = req.body;
+    const { title, desc, price } = req.body;
 
     const properties = {
       title,
-      description,
+      desc,
       price,
       itemImage: `http://localhost:${process.env.PORT}/static/${req.file.filename}`,
     };

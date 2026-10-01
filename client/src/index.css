@@ -24,7 +24,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: var(--text);
-  background-color: var(--bg);
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
 }
 
 code {
@@ -33,11 +33,31 @@ code {
 }
 
 :root {
-  --bg: #20232a;
+  /* Фоны */
+  --bg: #0e1014;
   --bg-alt: #282c34;
-  --text: #f6f7f9;
-  --text-muted: #a9b1bd;
-  --accent: #61dafb;
-  --accent-hover: #4fc3e8;
-  --border: #3a3f4b;
+  --surface: #15181e;
+  --surface-alt: #1c2028;
+
+  /* Границы */
+  --border: #252a33;
+  --border-strong: #353b47;
+
+  /* Текст */
+  --text: #e6e8ec;
+  --text-muted: #9aa1ae;
+  --text-subtle: #6b7280;
+
+  /* Акценты */
+  --accent: #442d85;
+  --accent-hover: #563aa3;
+  --accent-secondary: #191a43;
+  --accent-soft: #221f3d;
+  --accent-text: #b8a9f0;
+
+  /* Статусы */
+  --color-success: #3fa76a;
+  --color-warning: #d9a441;
+  --color-error: #e05c6e;
+  --color-info: #5b9bd5;
 }
